@@ -2,7 +2,6 @@ class School
 	attr_accessor :name,:roster,:add_student
 	attr_reader :grade, :sort
 	
-
   def initialize(school_name)
 		@name = school_name
     @roster = {}
@@ -22,7 +21,7 @@ class School
   end
   
   def sort
-    school.roster.map{|grade,students| [grade,students.sort]}.to_h
+    @roster.map{|grade,students| [grade,students.sort]}.to_h
   end
   
 end
